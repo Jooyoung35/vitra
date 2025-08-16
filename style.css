@@ -37,6 +37,7 @@ body{
 #header .wrap-logo-gnb .gnb li a{
   font-weight: 700;
   color: #f4f4f4;
+  font-size: 18px;
   transition: all 0.3s;
 }
 #header .wrap-logo-gnb .gnb li a:hover{
