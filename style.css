@@ -7,6 +7,7 @@ img{vertical-align: top; border: none;}
 
 body{
   font-family: 'SUIT Variable', 'Pretendard Variable', sans-serif; /*영문 suit, 한글 pretendard*/
+  overflow-x: hidden;
 }
 #header{
   width: 100%;
@@ -17,6 +18,9 @@ body{
   position: fixed;
   top: 0; left: 0;
   z-index: 999;
+}
+#header.scrolled{
+  background-color: #00000050;
 }
 #header .wrap-logo-gnb{
   display: flex;
@@ -44,8 +48,61 @@ body{
   color: #254d4d;
 }
 
-#header .side-menu{
+/* 모바일용 gnb */
+#header .wrap-hd-mobile{
+  position: absolute;
+  top: 0; right: 0;
 }
+#header .wrap-hd-mobile .ham-btn{
+  display: none;
+  color: #f4f4f4;
+  position: absolute;
+  right: 50px;
+  top: 45px;
+  z-index: 998;
+  cursor: pointer;
+}
+#header .wrap-hd-mobile .mobile-menu{
+  width: 250px;
+  height: 100vh;
+  background-color: #00000070;
+  backdrop-filter: blur(2px);
+  padding: 100px 50px;
+  display: none;
+}
+#header .wrap-hd-mobile .mobile-menu .mo-sub-icon{
+  display: flex;
+  gap: 15px;
+  justify-content: right;
+}
+
+#header .wrap-hd-mobile .mobile-menu .mo-gnb{
+  text-align: right;
+  padding-top: 20px;
+}
+#header .wrap-hd-mobile .mobile-menu .mo-gnb li{
+  margin-top: 15px;
+}
+#header .wrap-hd-mobile .mobile-menu .mo-gnb li a{
+  color: #f4f4f4;
+}
+#header .wrap-hd-mobile .mobile-menu .mo-gnb li a:hover{
+  text-decoration: underline;
+}
+#header .wrap-hd-mobile .mobile-menu .contact{
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+}
+#header .wrap-hd-mobile .mobile-menu .contact li a{
+  color: #f4f4f4;
+  font-size: 14px;
+}
+
+
+
 #header .side-menu .contact{
   display: flex;
   gap: 20px;
@@ -122,7 +179,8 @@ body{
 
 #section .product{
   width: 100%;
-  height: 100vh;
+  /* height: 900px; */
+  padding-bottom: 80px;
   background-image: url(images/pro-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -159,7 +217,6 @@ body{
 #section .product .wrap-pro-cont li .img-s{
   width: 100%;
   height: 374px;
-  background-repeat: no-repeat;
 }
 #section .product .wrap-pro-cont li.chairs .img-s{
   background-image: url(images/chairs.jpg);
@@ -207,9 +264,8 @@ body{
 
 #section .environmental{
   width: 100%;
-  height: 100vh;
   background-color: #254d4d;
-  padding-top: 8%;
+  padding: 8% 0;
 }
 #section .environmental .wrap-envi{
   display: flex;
@@ -274,7 +330,7 @@ body{
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  padding: 8% 0;
   display: flex;
   align-items: center;
 }
@@ -325,10 +381,7 @@ body{
   transition: all 0.3s;
 }
 #section .campus .wrap-cam .btn a:hover{
-  width: 20%;
-  display: block;
   color: #f4f4f4;
-  padding: 10px 0;
   background-color: #122e2f;
 }
 
@@ -378,4 +431,228 @@ body{
   color: #8b8b8b;
   font-size: 14px;
   font-weight: 200;
+}
+
+
+@media all and (min-width:1080px) and (max-width:1580px){
+  #section .product .wrap-pro-cont .wrap-text{
+  padding: 30px 20px 30px;
+}
+  #section .product .wrap-pro-cont .wrap-text .desc{
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+
+#section .environmental .environ-img img{
+  width: 300px;
+}
+#section .environmental .environ-txt p{
+  font-size: 16px;
+}
+#section .environmental .environ-img img:last-child{
+  margin: 30px 0 0 90px;
+}
+}
+
+
+@media all and (min-width:800px) and (max-width:1079px){
+
+  #header .wrap-logo-gnb .gnb{
+    display: none;
+  }
+
+  #header .ham-btn{
+    display: block;
+  }
+  #header .side-menu{
+    display: none;
+  }
+
+  /* 모바일용 */
+  #header .wrap-hd-mobile .ham-btn{
+    display: block;
+  }
+  #header .wrap-hd-mobile .mobile-menu.active{
+    display: block;
+  }
+
+ /* info */
+  #section .info{
+    display: block;
+  }
+  #section .info .info-cont{
+    width: 100%;
+  }
+
+
+
+  /* products */
+  #section .product .wrap-pro-cont{
+    display: block;
+  }
+  #section .product .wrap-pro-cont li{
+    width: 100%;
+    display: flex;
+    margin-top: 15px;
+  }
+  #section .product .wrap-pro-cont li .img-s{
+    width: 55%;
+    height: 374px;
+  }
+  #section .product .wrap-pro-cont .wrap-text{
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #section .product .wrap-pro-cont .wrap-text .desc{
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+
+  #section .environmental .wrap-envi{
+    display: block;
+  }
+  #section .environmental .environ-img{
+    display: flex;
+    width: 100%;
+  }
+  #section .environmental .environ-img img{
+    width: 450px;
+  }
+  #section .environmental .environ-txt{
+    width: 100%;
+    margin-top: 50px;
+  }
+  #section .environmental .environ-txt p{
+    font-size: 16px;
+  }
+  #section .environmental .environ-img img:last-child{
+    margin: 10px 0 0 28%;
+  }
+  #section .environmental .environ-txt .view-btn{
+    width: 40%;
+  }
+
+
+  #section .campus .wrap-cam p{
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+/* ~799px */
+@media all and (max-width:799px){
+
+  #header .wrap-logo-gnb .gnb{
+    display: none;
+  }
+
+  #header .ham-btn{
+    display: block;
+  }
+  #header .side-menu{
+    display: none;
+  }
+
+  /* 모바일용 */
+  #header .wrap-hd-mobile .ham-btn{
+    display: block;
+  }
+  #header .wrap-hd-mobile .mobile-menu.active{
+    display: block;
+  }
+
+
+   /* info */
+  #section .info{
+    display: block;
+  }
+  #section .info .info-cont{
+    width: 100%;
+  }
+
+
+
+  /* products */
+  #section .product .wrap-pro-cont{
+    display: block;
+  }
+  #section .product .wrap-pro-cont li{
+    width: 100%;
+    display: block;
+    margin-top: 15px;
+  }
+  #section .product .wrap-pro-cont li .img-s{
+    width: 100%;
+    height: 374px;
+  }
+  #section .product .wrap-pro-cont .wrap-text{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+
+  #section .environmental .wrap-envi{
+    display: block;
+  }
+  #section .environmental .environ-img{
+    display: flex;
+    width: 100%;
+  }
+  #section .environmental .environ-img img{
+    width: 100%;
+  }
+  #section .environmental .environ-txt{
+    width: 100%;
+    margin-top: 50px;
+  }
+  #section .environmental .environ-txt p{
+    font-size: 16px;
+  }
+  #section .environmental .environ-img img:last-child{
+    margin: 10px 0 0;
+  }
+  #section .environmental .environ-txt .view-btn{
+    width: 100%;
+  }
+
+
+  #section .campus .wrap-cam p{
+    width: 100%;
+    font-size: 16px;
+    padding: 80px 55px;
+  }
+  #section .campus .wrap-cam .btn a{
+    width: 45%;
+  }
+
+
+  /* footer */
+  #footer .foot-menu{
+    display: block;
+  }
+  #footer .foot-menu li .menu-sub{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 30px;
+  }
+  #footer .foot-menu li .menu-sub li a{
+    display: block;
+    color: #c7c7c7;
+    font-size: 14px;
+    font-weight: 300;
+    transition: all 0.3s;
+  }
 }
