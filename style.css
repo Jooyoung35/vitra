@@ -594,6 +594,9 @@ body{
   #section .product .wrap-pro-cont{
     display: block;
   }
+  #section .product .sec-title{
+    padding: 80px 0 50px;
+  }
   #section .product .wrap-pro-cont li{
     width: 100%;
     display: block;
@@ -608,6 +611,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 30px 20px;
   }
 
 
@@ -649,6 +653,7 @@ body{
   /* footer */
   #footer .foot-menu{
     display: block;
+    width: 90%;
   }
   #footer .foot-menu li .menu-sub{
     display: flex;
