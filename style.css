@@ -658,9 +658,11 @@ body{
   #footer .foot-menu li .menu-sub{
     display: flex;
     gap: 10px;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 5px;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+
   }
   #footer .foot-menu li .menu-sub li a{
     display: block;
