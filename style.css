@@ -550,14 +550,14 @@ body{
 
 /* ~799px */
 @media all and (max-width:799px){
-
+  #header{
+    padding: 20px 20px;
+  }
   #header .wrap-logo-gnb .gnb{
     display: none;
   }
 
-  #header .ham-btn{
-    display: block;
-  }
+  
   #header .side-menu{
     display: none;
   }
@@ -565,9 +565,16 @@ body{
   /* 모바일용 */
   #header .wrap-hd-mobile .ham-btn{
     display: block;
+    right: 20px;
+  }
+  #header .wrap-hd-mobile .mobile-menu{
+    padding: 100px 20px;
   }
   #header .wrap-hd-mobile .mobile-menu.active{
     display: block;
+  }
+  #header .wrap-hd-mobile .mobile-menu .contact{
+    right: 20px;
   }
 
 
