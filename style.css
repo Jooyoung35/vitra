@@ -4,7 +4,9 @@
 ul{list-style: none;}
 a{color: #111111; text-decoration: none;}
 img{vertical-align: top; border: none;}
-
+html{
+  overflow-x: hidden;
+}
 body{
   font-family: 'SUIT Variable', 'Pretendard Variable', sans-serif; /*영문 suit, 한글 pretendard*/
   overflow-x: hidden;
@@ -650,7 +652,7 @@ body{
   }
   #footer .foot-menu li .menu-sub{
     display: flex;
-    gap: 15px;
+    gap: 10px;
     justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 30px;
